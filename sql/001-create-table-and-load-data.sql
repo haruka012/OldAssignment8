@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS animals;
   id int unsigned AUTO_INCREMENT,
   name VARCHAR(20) NOT NULL,
   type VARCHAR(20) NOT NULL,
-  class VARCHAR(20) NOT NULL,
+  classification VARCHAR(20) NOT NULL,
   sex CHAR(1) NOT NULL,
   PRIMARY KEY(id)
  );

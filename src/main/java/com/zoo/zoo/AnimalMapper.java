@@ -17,7 +17,7 @@ public interface AnimalMapper {
     @Select("SELECT * FROM animals WHERE name LIKE CONCAT('%',#{suffix})")
     List<Animal> endsWith(@Param("suffix") String suffix);
 
-    @Select("SELECT * FROM animals WHERE name LIKE CONCAT('%',#{interfix},'%')")
-    List<Animal> contains(@Param("interfix")String interfix);
+    @Select("SELECT * FROM animals WHERE name LIKE CONCAT('%',#{name},'%')")
+    List<Animal> contains(@Param("name")String name);
 
 }

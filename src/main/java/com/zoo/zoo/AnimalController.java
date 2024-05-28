@@ -1,7 +1,6 @@
 package com.zoo.zoo;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class AnimalController {
 
     //クエリ文字列を指定して、検索する。（検索条件が複数ある場合）
     @GetMapping("/animal/search")
-    public List<Animal> findByAnimalsNames(AnimalSearchRequest request){
+    public List<Animal> findByAnimalNames(AnimalSearchRequest request){
 
         List<Animal> animals = new ArrayList<>();
         animals.addAll(animalMapper.startsWith(request.getStartsWith()));

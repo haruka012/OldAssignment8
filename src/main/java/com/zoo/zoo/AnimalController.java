@@ -30,6 +30,5 @@ public class AnimalController {
         animals.addAll(animalMapper.contains(request.getContains()));
 
         return  animals;
-
-         }
+    }
 }

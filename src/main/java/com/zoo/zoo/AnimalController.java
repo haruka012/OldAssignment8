@@ -8,16 +8,16 @@ import java.util.List;
 
 @RestController
 public class AnimalController {
-    private AnimalMapper animalMapper;
+    private AnimalService animalService;
 
-    public AnimalController(AnimalMapper animalMapper){
-        this.animalMapper = animalMapper;
+    public AnimalController(AnimalService animalService) {
+        this.animalService = animalService;
     }
 
     //全件取得する
     @GetMapping("/animals")
-    public List<Animal> findAll(){
-        return animalMapper.findAll();
+    public List<Animal> getAnimals(){
+        return animalService.findAll();
     }
 
     //クエリ文字列を指定して、検索する。（検索条件が複数ある場合）
@@ -25,9 +25,9 @@ public class AnimalController {
     public List<Animal> findByAnimalNames(AnimalSearchRequest request){
 
         List<Animal> animals = new ArrayList<>();
-        animals.addAll(animalMapper.startsWith(request.getStartsWith()));
-        animals.addAll(animalMapper.endsWith(request.getEndsWith()));
-        animals.addAll(animalMapper.contains(request.getContains()));
+        animals.addAll(animalService.startsWith(request.getStartsWith()));
+        animals.addAll(animalService.endsWith(request.getEndsWith()));
+        animals.addAll(animalService.contains(request.getContains()));
 
         return  animals;
     }

@@ -1,39 +1,48 @@
 package com.zoo.zoo;
 
 public class Animal {
-    private int id;
-    private String name;
 
-    private String type;
+  private int id;
 
-    private  String classification;
+  private String name;
 
-    private String sex;
+  private String type;
 
-    public Animal(int id, String name, String type, String classification, String sex) {
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.classification = classification;
-        this.sex = sex;
-    }
+  private String classification;
 
-    public int getId() {
-        return id;
-    }
+  private String sex;
 
-    public String getName() {
-        return name;
-    }
+  public Animal(int id, String name, String type, String classification, String sex) {
 
-    public String getType() {
-        return type;
-    }
+    this.id = id;
+    this.name = name;
+    this.type = type;
+    this.classification = classification;
+    this.sex = sex;
+  }
 
-    public String getClassification() {
-        return classification;
-    }
-    public String getSex() {
-        return sex;
-    }
+  public int getId() {
+
+    return id;
+  }
+
+  public String getName() {
+
+    return name;
+  }
+
+  public String getType() {
+
+    return type;
+  }
+
+  public String getClassification() {
+
+    return classification;
+  }
+
+  public String getSex() {
+
+    return sex;
+  }
 }

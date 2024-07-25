@@ -33,7 +33,7 @@
     * StatusCode: 200
     * Body: 動物のリストをJSON形式で返す
       ```curl  
-      curl--location 'localhost:8080/animals/seach'
+      curl--location 'localhost:8080/animals/search'
       ```
 
 ## 指定したIDの動物を取得するAPI

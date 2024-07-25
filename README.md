@@ -24,6 +24,18 @@
       curl--location 'localhost:8080/animals'
       ```
 
+## クエリ文字列を指定して検索するAPI（検索条件が複数ある場合）
+
+* リクエスト
+    * Method: GET
+    * URL: /animals/search
+* レスポンス
+    * StatusCode: 200
+    * Body: 動物のリストをJSON形式で返す
+      ```curl  
+      curl--location 'localhost:8080/animals/seach'
+      ```
+
 ## 指定したIDの動物を取得するAPI
 
 * リクエスト
@@ -39,20 +51,20 @@
     * 200の場合のレスポンス
       ```json
       {
-      "id": 1,
-      "name": "モモ",
-      "type": "カバ",
-      "classification": "哺乳類",
-      "sex": "2"
+        "id": 1,
+        "name": "モモ",
+        "type": "カバ",
+        "classification": "哺乳類",
+        "sex": "2"
       }
       ```
     * 404の場合のレスポンス
       ```json
       {
-      "message": "animal not found",
-      "timestamp": "2024-06-20T06:07:01.528696700+09:00[Asia/Tokyo]",
-      "error": "Not Found",
-      "path": "/animals/100",
-      "status": "404"
+        "message": "animal not found",
+        "timestamp": "2024-06-20T06:07:01.528696700+09:00[Asia/Tokyo]",
+        "error": "Not Found",
+       "path": "/animals/100",
+       "status": "404"
       }
       ```

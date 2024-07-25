@@ -64,7 +64,7 @@
         "message": "animal not found",
         "timestamp": "2024-06-20T06:07:01.528696700+09:00[Asia/Tokyo]",
         "error": "Not Found",
-       "path": "/animals/100",
-       "status": "404"
+        "path": "/animals/100",
+        "status": "404"
       }
       ```

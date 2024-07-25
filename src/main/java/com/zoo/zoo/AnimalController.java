@@ -25,7 +25,7 @@ public class AnimalController {
   }
 
   //クエリ文字列を指定して、検索する。（検索条件が複数ある場合）
-  @GetMapping("/animal/search")
+  @GetMapping("/animals/search")
   public List<Animal> findByAnimalNames(AnimalSearchRequest request) {
 
     List<Animal> animals = new ArrayList<>();
